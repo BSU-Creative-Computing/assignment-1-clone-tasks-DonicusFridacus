@@ -1,0 +1,126 @@
+/*Declaring of the variables*/
+/*Styling the body of the website*/
+* {
+  margin: auto;
+  background-color: #cee1e4;
+}
+
+/*Creating mixins for centering items and media breakpoints*/
+/*Setting the css for the image placeholder*/
+.img-sec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8ccff7;
+  margin-bottom: 45px;
+}
+.img-sec img {
+  max-width: 100%;
+}
+@media (max-width: 801px) {
+  .img-sec img {
+    content: url("https://via.placeholder.com/300");
+  }
+}
+@media (max-width: 480px) {
+  .img-sec img {
+    content: url("https://via.placeholder.com/200");
+  }
+}
+
+/*Setting the css for the differently colored rows*/
+.row-sec .row {
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 38px;
+  /*Setting the hover selector*/
+}
+.row-sec .row:nth-child(1) {
+  background-color: #4e89ae;
+  color: #4e89ae;
+}
+.row-sec .row:nth-child(2) {
+  background-color: #43658b;
+  color: #43658b;
+}
+.row-sec .row:nth-child(3) {
+  background-color: #ed6663;
+  color: #ed6663;
+}
+.row-sec .row:nth-child(4) {
+  background-color: #ffa372;
+  color: #ffa372;
+}
+.row-sec .row:hover {
+  background-color: #444;
+  color: #444;
+}
+
+/*Setting the css for the circles*/
+.circle {
+  background-color: #4e89ae;
+  border-radius: 100px;
+  margin: 12px;
+  width: 10px;
+  /*Styling the circle's nth-children*/
+  /*Setting the hover selector*/
+}
+.circle:nth-child(1) {
+  background-color: #4e89ae;
+  border-radius: 70px;
+  width: 70px;
+  height: 70px;
+}
+.circle:nth-child(2) {
+  background-color: #43658b;
+  border-radius: 80px;
+  width: 80px;
+  height: 80px;
+}
+.circle:nth-child(3) {
+  background-color: #ed6663;
+  border-radius: 90px;
+  width: 90px;
+  height: 90px;
+}
+.circle:nth-child(4) {
+  background-color: #ffa372;
+  border-radius: 100px;
+  width: 100px;
+  height: 100px;
+}
+.circle:hover {
+  background-color: #444;
+}
+
+/*Setting the container for the circles*/
+.circle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+@media (max-width: 621px) {
+  .circle-container {
+    flex-direction: column;
+    margin: auto;
+  }
+}
+
+/*Spacing out the circle section*/
+.circle-sec {
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
+/*Styling the footer*/
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8ccff7;
+  height: 50px;
+}/*# sourceMappingURL=task3.css.map */

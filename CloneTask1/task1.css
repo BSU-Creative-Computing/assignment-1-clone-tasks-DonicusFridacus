@@ -1,3 +1,4 @@
+/*Styling the body of the website*/
 body {
     background-color: whitesmoke;
     font-family: monospace;
@@ -5,10 +6,12 @@ body {
     max-width: 1024px;
 }
 
+/*Styling the header of the website*/
 header {
     background-color: white;
 }
 
+/*Styling the logo in the header*/
 header img {
     max-width: 5%;
     height: auto;
@@ -16,10 +19,12 @@ header img {
     justify-self: start;
 }
 
+/*Styling the main part of the website*/
 main {
-    text-align: center;
+    text-align: center; /*Aligning items*/
 }
 
+/*Styling the images in the main section*/
 main img {
     max-width: 100%;
     height: auto;
@@ -27,10 +32,12 @@ main img {
     background-color: white;
 }
 
+/*Styling the text container*/
 .textarea {
     justify-content: center;
 }
 
+/*Styling the text*/
 .text {
     background-color: white;
     padding: 10px;
@@ -38,10 +45,12 @@ main img {
     box-sizing: border-box;
 }
 
+/*Setting the background to white*/
 .contain {
     background-color: white;
 }
 
+/*Styling the footer of the website*/
 footer {
     text-align: center;
     color: white;
@@ -51,7 +60,7 @@ footer {
     box-sizing: border-box;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 480px) { /*For screens below 480px*/
     main img {
         width: 100%;
         float: none;
@@ -62,21 +71,21 @@ footer {
     }
 }
 
-@media (min-width: 481px) and (max-width: 800px) {
+@media (min-width: 481px) and (max-width: 800px) { /*For screens between 481px and 800px*/
     main img {
         width: 50%;
         float: left;
     }
 }
 
-@media (min-width: 801) and (max-width: 1024px) {
+@media (min-width: 801) and (max-width: 1024px) { /*For screens between 801px and 1024px*/
     main img {
         width: 33%;
         float: left;
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1024px) { /*For screens above 1024px*/
     main img {
         width: 33.31%;
         float: left;   

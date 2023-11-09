@@ -1,0 +1,139 @@
+/*Declaring of the variables*/
+$circleRadii: 70px, 80px, 90px, 100px;
+$itemColors: #4e89ae, #43658b, #ed6663, #ffa372;
+
+/*Styling the body of the website*/
+* {
+    margin: auto;
+    background-color: #cee1e4;
+}
+
+/*Creating mixins for centering items and media breakpoints*/
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin media($breakpoint) {
+    @media (max-width: $breakpoint) {
+        @content;
+    }
+}
+
+/*Setting the css for the image placeholder*/
+.img-sec {
+    @include center;
+    background-color: #8ccff7;
+    margin-bottom: 45px;
+
+    img {
+        max-width: 100%;
+    }
+
+    @include media(801px) {
+        img {
+            content: url("https://via.placeholder.com/300");
+        }
+    }
+
+    @include media(480px) {
+        img {
+            content: url("https://via.placeholder.com/200");
+        }
+    }
+}
+
+/*Setting the css for the differently colored rows*/
+.row-sec .row {
+    display: inline-block;
+    @include center;
+    height: 38px;
+    
+    &:nth-child(1) {
+        background-color: nth($itemColors, 1);
+        color: nth($itemColors, 1);
+    }
+    &:nth-child(2) {
+        background-color: nth($itemColors, 2);
+        color: nth($itemColors, 2);
+    }
+    &:nth-child(3) {
+        background-color: nth($itemColors, 3);
+        color: nth($itemColors, 3);
+    }
+    &:nth-child(4) {
+        background-color: nth($itemColors, 4);
+        color: nth($itemColors, 4);
+    }
+
+    /*Setting the hover selector*/
+    &:hover {
+        background-color: #444;
+        color: #444;
+    }
+}
+
+/*Setting the css for the circles*/
+.circle {
+    background-color: nth($itemColors, 1);
+    border-radius: 100px;
+    margin: 12px;
+    width: 10px;
+
+    /*Styling the circle's nth-children*/
+    &:nth-child(1) {
+        background-color: nth($itemColors, 1);
+        border-radius: nth($circleRadii, 1);
+        width: nth($circleRadii, 1);
+        height: nth($circleRadii, 1);
+    }
+    &:nth-child(2) {
+        background-color: nth($itemColors, 2);
+        border-radius: nth($circleRadii, 2);
+        width: nth($circleRadii, 2);
+        height: nth($circleRadii, 2);
+    }
+    &:nth-child(3) {
+        background-color: nth($itemColors, 3);
+        border-radius: nth($circleRadii, 3);
+        width: nth($circleRadii, 3);
+        height: nth($circleRadii, 3);
+    }
+    &:nth-child(4) {
+        background-color: nth($itemColors, 4);
+        border-radius: nth($circleRadii, 4);
+        width: nth($circleRadii, 4);
+        height: nth($circleRadii, 4);
+    }
+
+    /*Setting the hover selector*/
+    &:hover {
+        background-color: #444;
+    }
+}
+
+/*Setting the container for the circles*/
+.circle-container {
+    @include center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+    @include media(621px) {
+        flex-direction: column;
+        margin: auto;     
+    } 
+}
+
+/*Spacing out the circle section*/
+.circle-sec {
+    margin-top: 48px;
+    margin-bottom: 48px;   
+}
+
+/*Styling the footer*/
+footer {
+    @include center;
+    background-color: #8ccff7;
+    height: 50px;
+}

@@ -1,0 +1,283 @@
+/*Styling the body of the website*/
+body {
+    align-items: center;
+    margin: 0%;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    background-color: white;
+}
+
+/*Styling the header of the website*/
+header {
+    align-items: center; /*Aligning items to the center*/
+    justify-content: space-evenly;
+    background-color: #1E90FF;
+    display: flex;
+    height: 75px;
+    width: 100%;
+}
+
+/*Styling the title of the website*/
+.title {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+}
+
+/*Styling the searchbar of the header*/
+.searchbar {
+    border: 2px solid #767676;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    padding: 13px 0px 13px 0px;
+    width: 30%;
+    height: 24px;
+    background-color: #FFFFFF;
+    color: #767676;
+}
+
+/*Styling the text in the searcbar*/
+.searchText {
+    padding-left: 12px;
+    opacity: 0.4;
+}
+
+/*Styling the navigation of the website*/
+.uList {
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    margin-right: 15px;
+    justify-content: end;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+}
+
+.item1, .item2, .item3, .item4 {
+    list-style-type: none; /*Removing the decoration of the list*/
+    display: flex;
+}
+
+/*Will appear if certain screen size is reached*/
+.item5 {
+    display: none;
+}
+
+/*Styling the main part of the website*/
+main {
+    display: flex;    
+    padding: 0 20px 0 20px;
+    background-color: #eeeeee;
+}
+
+/*Styling the section that contains the movies*/
+.movieContent {
+    display: flex;    
+    padding-top: 25px;
+    margin: auto;
+}
+
+/*Styling the main content*/
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 5px 5px grey;
+    width: 700px;
+    height: 100%;
+    float: left;
+}
+
+/*Styling the image of the main content*/
+.mainContent img {
+    background-color: white;
+}
+
+/*Styling the text for the movies' info*/
+.textarea {
+    display: flex;    
+    padding: 15px;
+    padding-top: 0;
+    flex-direction: column;
+    background-color: white;
+}
+
+/*Styling the images of the other movies*/
+.mvImg {
+    max-width: 100%;
+    margin: 16px;
+    color: white;
+}
+
+/*Styling each movie*/
+.movie1, .movie2, .movie3, .movie4 {
+    display: flex;    
+    box-shadow: 1px 5px 5px grey;
+    flex-direction: column;
+    width: 90%;
+    margin-left: 10%;
+    background-color: white;
+}
+
+/*Styling the other content of the website*/
+.otherContent {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+/*Styling the buttons*/
+button {
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+    background-color: #1B98FF;
+    color: white;
+    padding: 10px;
+    margin: 25px;
+    border-radius: 5px 5px 5px 5px;
+    width: 90px;
+    border: none;
+}
+
+/*Using media queries to make the website responsive*/
+
+@media (min-width: 1024px) { /*For screens above 1024px*/
+    .otherContent {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        width: auto;
+    }
+}
+
+@media (min-width: 801px) and (max-width: 1024px) { /*For screens between 801px and 1024px*/
+    .otherContent {
+        display: grid;
+        width: auto;
+        margin: 0;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 800px) { /*For screens between 481px and 800px*/
+    .movieContent {
+        flex-direction: column;
+    }
+
+    .movie1, .movie2 {
+        flex-direction: column;
+        width: auto;
+        margin: 0;
+    }
+
+    .movie3, .movie4 {
+        flex-direction: column;
+        width: auto;
+        margin: 0;
+    }
+
+    .otherContent {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .movie1, .movie2, .movie3, .movie4 {
+        max-width: 100%;
+    }
+
+    .mainContent {
+        margin: auto;
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+
+    .searchbar {
+        display: none;
+    }
+
+    .uList {
+        justify-content: flex-end;
+        align-self: center;
+    }
+
+    .item1, .item2, .item3, .item4 {
+        display: none;
+    }  
+
+    .item5 {
+        display: flex;
+        padding: 15px;
+    }
+
+    header {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 480px) { /*For screens below 480px*/
+    .title {
+        font-size: 10px;
+    }
+
+    .searchbar {
+        display: none;
+    }
+
+    .movieContent {
+        display: inline;
+        flex-direction: row;
+        max-width: 350px;
+    }
+
+    .movie1, .movie2, .movie3, .movie4 {
+        flex-direction: column;
+        width: auto;
+        margin: 0;
+    }
+
+    .otherContent {
+        margin: 0 auto;
+        width: 100%;
+        display: inline-block;
+    }
+
+    .movie1, .movie2, .movie3, .movie4 {
+        max-width: 350px;
+        margin: auto;
+    }
+
+    .mainContent {
+        margin: auto;
+        width: 350px;
+        float: none;
+    }
+
+    .mainContent img {
+        margin: 0;
+        display: inline-block;
+    }
+     
+    .uList {
+        display: none;
+    }
+
+    .item5 {
+        display: flex;
+    }
+
+    header {
+        justify-content: space-between;
+    }
+}
+
+/*Styling the footer of the website*/
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eeeeee;
+}
